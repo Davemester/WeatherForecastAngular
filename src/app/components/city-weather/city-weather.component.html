@@ -1,0 +1,53 @@
+<div class="wrapper">
+  <div class="city-datas">
+<mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon >home</mat-icon>
+      <h1 matLine>{{city}}</h1>
+      <p matLine>{{currentDateString}}</p>
+    </mat-list-item>
+   <mat-divider></mat-divider>
+   <div class="weather-data" *ngIf="currentWeatherDatas">
+    <mat-list-item >
+      <mat-icon matListIcon>fiber_manual_record</mat-icon>
+      <h5 matLine>Hőmérséklet</h5>
+      <p matLine>{{ currentWeatherDatas.temp}} °C</p>
+    </mat-list-item>
+  
+    <mat-list-item>
+      <mat-icon matListIcon>fiber_manual_record</mat-icon>
+      <h5 matLine>Páratartalom</h5>
+      <p matLine>{{currentWeatherDatas.humid}} %</p>
+    </mat-list-item>
+  
+    <mat-list-item>
+      <mat-icon matListIcon>fiber_manual_record</mat-icon>
+      <h5 matLine>Légnyomás</h5>
+      <p matLine>{{currentWeatherDatas.pressure}} hPa</p>
+    </mat-list-item>
+  
+    <mat-list-item>
+      <mat-icon matListIcon>fiber_manual_record</mat-icon>
+      <h5 matLine>Szélerősség</h5>
+      <p matLine>{{currentWeatherDatas.windForce}} m/s</p>
+    </mat-list-item>
+  
+    <mat-list-item>
+      <mat-icon matListIcon>fiber_manual_record</mat-icon>
+      <h5 matLine>Szélirány</h5>
+      <p matLine>{{currentWeatherDatas.windDirection}}°</p>
+    </mat-list-item>
+   </div>
+    
+  </mat-list>
+  </div>
+    
+      
+      <app-ngx-chart *ngIf="temperatureData" class="chart"
+      [multi]="temperatureData"
+      [xAxisLabel]="'5 napos előrejelzés'"
+      [yAxisLabel]="temperatureString"
+      ></app-ngx-chart>
+    
+    
+</div>

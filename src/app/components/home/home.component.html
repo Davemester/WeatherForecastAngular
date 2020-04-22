@@ -1,0 +1,22 @@
+<app-header ></app-header>
+<mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+  <mat-tab *ngFor="let city of user.cities">
+    <ng-template mat-tab-label>
+      <label >{{city}}</label>
+      <a class="delete-btn" (click)="deleteTab(city)">
+        <mat-icon>delete</mat-icon>
+      </a>
+    </ng-template>
+    <ng-template matTabContent>
+      <app-city-weather [city]="city"></app-city-weather>
+    </ng-template>
+   
+  </mat-tab>
+  <mat-tab disabled>
+    <ng-template mat-tab-label>
+      <a class="add-city" mat-button (click)="openDialog()">
+        <mat-icon>add</mat-icon> 
+      </a>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

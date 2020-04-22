@@ -1,0 +1,20 @@
+.navbar{
+  justify-content: space-between;
+}
+.rightmost>* {
+  margin-left: 0.5rem;
+  margin-right: .05rem;
+  display: inline;
+}
+.username {
+  font-size: 1rem;
+}
+
+
+@media only screen and (max-width: 425px) {
+  .rightmost>div {
+   display: none;
+
+  }
+
+}

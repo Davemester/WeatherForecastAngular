@@ -1,0 +1,10 @@
+.add-city{
+  cursor: pointer;
+}
+.delete-btn {
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+}
+.delete-btn:hover {
+  background-color: rgb(202, 195, 195);
+}

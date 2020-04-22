@@ -1,0 +1,8 @@
+<mat-toolbar  class="navbar" color="primary">
+  <div>WeatherForecastApp</div>
+  <div class="rightmost"> 
+    <div>{{(this.userS.currentUser | async).userName}}</div>
+    <button mat-flat-button (click)="logout()">Logout</button>
+  </div>
+</mat-toolbar>
+
