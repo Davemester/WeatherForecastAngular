@@ -8,7 +8,7 @@ import { LocalstorageService } from './services/localstorage.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'encosoft-test-app';
+
 
   constructor(private usersService: UsersService,
               private lsService: LocalstorageService) {}
